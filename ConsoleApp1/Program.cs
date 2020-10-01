@@ -101,9 +101,9 @@ namespace ConsoleApp1
                     {
                         Report.AddCube(xmlFile.GetAttribute("currency"), xmlFile.GetAttribute("rate")); // adding a new Cube to the list
                     }
-                    catch (Exception NotANumberException)
+                    catch (Exception ex)
                     {
-                        Console.WriteLine("Exception: " + NotANumberException.Message);                 // sending a message about exception
+                        Console.WriteLine("Exception: " + ex.Message);                 // sending a message about exception
                         Report.AddCube(xmlFile.GetAttribute("currency"), xmlFile.GetAttribute("0.0"));  // sending an impossible rate value in case of exception
                     }
                 }

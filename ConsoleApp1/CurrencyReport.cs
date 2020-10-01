@@ -52,12 +52,11 @@ namespace ConsoleApp1
             Report = "";    // clearing the variable
 
             // adding first lines of the report                                            
-            AddLine("Subject: " + Subject);
-            AddLine("Sender: " + Sender);
+            AddLine($"{Subject} of EUR to other curriencies \nCreated by {Sender}");
             AddLine("Date: " + Date);
             for (int i = 0; i < AmountOfCubes; i++)     // adding cubes - informations about rates
             {
-                AddLine("Rate of " + Cubes[i].Currency + " to EUR: " + Cubes[i].Rate);
+                AddLine($"{Cubes[i].Currency} to EUR: {Cubes[i].Rate};");
             }
             AddLine("------ fin ------");               // adding end line
         }
